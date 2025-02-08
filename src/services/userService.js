@@ -1,6 +1,6 @@
-export const BASE_ROOT = 'https://localhost:7227/api';
-export const BASE_ADMIN_URL = `http://localhost:5173`;
-export const BASE_CLIENT_URL = `http://localhost:5174`;
+export const BASE_ROOT = 'https://mediashop-api.azurewebsites.net/api';
+export const BASE_ADMIN_URL = `https://create-mediashop.azurewebsites.net`;
+export const BASE_CLIENT_URL = `https://mediashop.azurewebsites.net `;
 export const BASE_URL = `${BASE_ROOT}/users`;
 
 let token = localStorage.getItem('token');
