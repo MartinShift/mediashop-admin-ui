@@ -1,5 +1,5 @@
 export const BASE_ROOT = 'https://mediashop-api.azurewebsites.net/api';
-export const BASE_ADMIN_URL = `https://create-mediashop.azurewebsites.net`;
+export const BASE_ADMIN_URL = `https://lemon-mushroom-04b813c03.4.azurestaticapps.net`;
 export const BASE_CLIENT_URL = `https://mediashop.azurewebsites.net `;
 export const BASE_URL = `${BASE_ROOT}/users`;
 
