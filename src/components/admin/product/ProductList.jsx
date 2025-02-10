@@ -7,8 +7,8 @@ import 'datatables.net-dt/css/dataTables.dataTables.css';
 
 import AdminSidebar from '../AdminSidebar';
 import AdminNavbar from '../AdminNavbar';
-import { getCurrentUser } from '../../../../../mediashop-client-ui/src/services/userService';
-import { getProductsByUserId, deleteProduct } from '../../../../../mediashop-client-ui/src/services/productService';
+import { getCurrentUser } from '../../../services/userService';
+import { getProductsByUserId, deleteProduct } from '../../../services/productService';
 import { BASE_CLIENT_URL, getToken, setToken } from '../../../services/userService';
 
 const ProductList = () => {

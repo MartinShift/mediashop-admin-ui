@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getCurrentUser } from '../../../../mediashop-client-ui/src/services/userService';
+import { getCurrentUser } from '../../services/userService';
 import LogoutModal from '../shared/LogoutModal';
 
 import { useNavigate } from 'react-router-dom';

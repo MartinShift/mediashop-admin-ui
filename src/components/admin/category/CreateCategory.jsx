@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import AdminSidebar from '../AdminSidebar';
 import AdminNavbar from '../AdminNavbar';
-import { createCategory } from '../../../../../mediashop-client-ui/src/services/categoryService';
+import { createCategory } from '../../../services/categoryService';
 
 const CreateCategory = () => {
   const [name, setName] = useState('');

@@ -4,9 +4,8 @@ import Swal from 'sweetalert2';
 import AdminSidebar from '../AdminSidebar';
 import AdminNavbar from '../AdminNavbar';
 import CategorySearchSelect from '../../shared/CategorySearchSelect';
-import { getCurrentUser } from '../../../../../mediashop-client-ui/src/services/userService';
 import '../../../css/sb-admin-2.css';
-import { getProduct, updateProduct } from '../../../../../mediashop-client-ui/src/services/productService';
+import { getProduct, updateProduct } from '../../../services/productService';
 const EditProduct = () => {
   const [formData, setFormData] = useState({
     name: '',

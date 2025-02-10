@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import AdminSidebar from '../AdminSidebar';
 import AdminNavbar from '../AdminNavbar';
-import { getCurrentUser } from '../../../../../mediashop-client-ui/src/services/userService';
-import { createProduct } from '../../../../../mediashop-client-ui/src/services/productService';
+import { getCurrentUser } from '../../../services/userService';
+import { createProduct } from '../../../services/productService';
 import CategorySearchSelect from '../../shared/CategorySearchSelect';
 
 const CreateProduct = () => {
