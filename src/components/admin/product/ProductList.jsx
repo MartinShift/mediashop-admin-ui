@@ -56,7 +56,25 @@ const ProductList = () => {
     if (!loading) {
       $('#dataTable1').DataTable({
         language: {
-          url: '../../../public/jquery-datatables-ukrainian.json'
+          "processing": "Зачекайте...",
+          "search": "Пошук:",
+          "lengthMenu": "Показати _MENU_ записів",
+          "info": "Записи з _START_ по _END_ із _TOTAL_ записів",
+          "infoEmpty": "Записи з 0 по 0 із 0 записів",
+          "infoFiltered": "(відфільтровано з _MAX_ записів)",
+          "loadingRecords": "Завантаження...",
+          "zeroRecords": "Записи відсутні.",
+          "emptyTable": "У таблиці відсутні дані",
+          "paginate": {
+            "first": "Перша",
+            "previous": "Попередня",
+            "next": "Наступна",
+            "last": "Остання"
+          },
+          "aria": {
+            "sortAscending": ": активувати для сортування стовпця за зростанням",
+            "sortDescending": ": активувати для сортування стовпця за спаданням"
+          }
         }
       });
     }
