@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { authenticate } from '../../../mediashop-client-ui/src/services/userService';
+import { authenticate } from '../services/userService';
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
