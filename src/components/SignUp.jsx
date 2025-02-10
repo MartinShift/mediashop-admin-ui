@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { register } from '../../../mediashop-client-ui/src/services/userService';
+import { register } from '../services/userService';
 import Swal from 'sweetalert2';
 
 const SignUp = () => {
