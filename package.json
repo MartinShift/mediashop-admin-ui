@@ -15,9 +15,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "datatables.net": "^2.2.1",
-    "datatables.net-dt": "^2.2.1",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "datatables.net": "^2.2.2",
+    "datatables.net-dt": "^2.2.2",
     "jquery": "^3.7.1",
+    "jquery.easing": "^1.4.1",
     "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

@@ -10,6 +10,11 @@ import EditProfile from './components/admin/EditProfile';
 import Orders from './components/admin/Orders';
 import './css/sb-admin-2.min.css'
 import './js/sb-admin-2.min.js'
+import 'jquery';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'jquery.easing';
+import 'datatables.net';
 const App = () => {
 
   return (
