@@ -14,6 +14,9 @@ export default defineConfig({
       },
     },
   },
+  optimizeDeps: {
+    include: ['jquery', 'bootstrap', 'jquery.easing', 'datatables.net'],
+  },
   server: {
     historyApiFallback: true,
   },

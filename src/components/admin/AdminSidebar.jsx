@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../js/sb-admin-2.js'
-import '../../css/sb-admin-2.css'
 import { BASE_CLIENT_URL, handleUserRedirect } from '../../services/userService.js';
-
+import '../../css/sb-admin-2.min.css';
+import '../../css/sb-admin-2.css';
+import '../../js/sb-admin-2.js';
+import '../../js/sb-admin-2.min.js';
 const AdminSidebar = () => {
   return (
     <ul className="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
