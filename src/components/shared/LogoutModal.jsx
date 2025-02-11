@@ -4,7 +4,7 @@ import { setToken } from '../../services/userService';
 const LogoutModal = () => {
   const handleLogout = () => {
     setToken(null); 
-    window.location.href = '/login';
+    window.location.href = '/signin';
   };
 
   return (
