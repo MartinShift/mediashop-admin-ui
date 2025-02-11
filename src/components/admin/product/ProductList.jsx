@@ -15,25 +15,6 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-
-      useEffect(() => {
-      const params = new URLSearchParams(window.location.search);
-      let token = params.get('token');
-      console.log('Token from params:', token);
-      if (token == null) {
-          token = getToken();
-
-      }
-      else if(token) {
-      console.log('set token:', token);
-          setToken(token);  
-          navigate('/admin/products');
-      }
-      else {
-          navigate('/signin');
-      }
-  }, []);
-
   useEffect(() => {
     const fetchProducts = async () => {
       try {
