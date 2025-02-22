@@ -44,19 +44,33 @@ export const getToken = () =>{
       return response.json();
     };
   
-  export const handleUserRedirect = (e) => {
-    e.preventDefault();
-    const token = localStorage.getItem('token');
-    if (token) {
-      const encodedToken = encodeURIComponent(token);
-      window.location.href = `${BASE_CLIENT_URL}?token=${encodedToken}`;
-    }
-    else 
-    {
-      window.location.href = `${BASE_CLIENT_URL}/signin`;
-    }
-  };
-  
+    export const checkAndSetTokenFromUrl = () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const tokenFromUrl = urlParams.get('token');
+      if (tokenFromUrl) {
+        setToken(tokenFromUrl);
+        window.history.replaceState({}, document.title, window.location.pathname);
+        return true;
+      }
+      return false;
+    };
+    
+    // Modify handleUserRedirect to include user data
+    export const handleUserRedirect = async (e) => {
+      e.preventDefault();
+      const token = localStorage.getItem('token');
+      if (token) {
+        try {
+          const encodedToken = encodeURIComponent(token);
+          window.location.href = `${BASE_CLIENT_URL}?token=${encodedToken}`;
+        } catch (error) {
+          console.error('Error getting user data:', error);
+          window.location.href = `${BASE_CLIENT_URL}/signin`;
+        }
+      } else {
+        window.location.href = `${BASE_CLIENT_URL}/signin`;
+      }
+    };
 
   export const register = async (formData) => {
     const response = await fetch(`${BASE_URL}/register`, {
@@ -91,6 +105,17 @@ export const getUserById = async (id) => {
   };
 
   export const getCurrentUser = async () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    let paramsToken = urlParams.get('token');
+    if (paramsToken) {
+      try {
+        setToken(paramsToken);
+        currentUser = null;
+      } catch (error) {
+        console.error('Error parsing user data:', error);
+      }
+    }
+
     if(currentUser != null)
     {
       return currentUser;
