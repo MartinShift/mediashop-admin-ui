@@ -1,6 +1,8 @@
 export const BASE_ROOT = 'https://mediashop-api.azurewebsites.net/api';
-export const BASE_ADMIN_URL = `https://lemon-mushroom-04b813c03.4.azurestaticapps.net`;
-export const BASE_CLIENT_URL = `https://jolly-ocean-0cf2f9c03.4.azurestaticapps.net`;
+//export const BASE_ADMIN_URL = `https://lemon-mushroom-04b813c03.4.azurestaticapps.net`;
+//export const BASE_CLIENT_URL = `https://jolly-ocean-0cf2f9c03.4.azurestaticapps.net`;
+export const BASE_ADMIN_URL = `http://localhost:5173`;
+export const BASE_CLIENT_URL = `http://localhost:5174`;
 export const BASE_URL = `${BASE_ROOT}/users`;
 
 let token = localStorage.getItem('token');
@@ -62,7 +64,7 @@ export const getToken = () =>{
       if (token) {
         try {
           const encodedToken = encodeURIComponent(token);
-          window.location.href = `${BASE_CLIENT_URL}?token=${encodedToken}`;
+          window.location.href = `${BASE_CLIENT_URL}/index?token=${encodedToken}`;
         } catch (error) {
           console.error('Error getting user data:', error);
           window.location.href = `${BASE_CLIENT_URL}/signin`;
@@ -105,16 +107,6 @@ export const getUserById = async (id) => {
   };
 
   export const getCurrentUser = async () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    let paramsToken = urlParams.get('token');
-    if (paramsToken) {
-      try {
-        setToken(paramsToken);
-        currentUser = null;
-      } catch (error) {
-        console.error('Error parsing user data:', error);
-      }
-    }
 
     if(currentUser != null)
     {

@@ -18,6 +18,17 @@ const ProductList = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
+        const urlParams = new URLSearchParams(window.location.search);
+        let paramsToken = urlParams.get('token');
+        console.log(paramsToken);
+        if (paramsToken) {
+          try {
+            setToken(paramsToken);
+          } catch (error) {
+            console.error('Error parsing user data:', error);
+          }
+        }
+
         const user = await getCurrentUser();
         const products = await getProductsByUserId(user.id);
         setProducts(products);
