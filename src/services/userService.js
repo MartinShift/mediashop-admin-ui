@@ -165,3 +165,21 @@ export const getUserRoles = async (id) => {
   });
   return response.json();
 };
+
+export const getUserAdmin = async (id) => {
+  const response = await fetch(`${BASE_URL}/${id}/admin`, {
+    method: 'GET',
+    headers: headers(),
+  });
+  return response.json();
+};
+
+
+export const getUsers = async () => {
+  const response = await fetch(`${BASE_URL}`, {
+    method: 'GET',
+    headers: headers(),
+  });
+  return response.json();
+};
+  

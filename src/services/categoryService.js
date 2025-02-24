@@ -54,7 +54,7 @@ export const deleteCategory = async (id) => {
     method: 'DELETE',
     headers: headers(),
   });
-  return response.json();
+  return response;
 };
 
 export const getCategoryByName = async (name) => {

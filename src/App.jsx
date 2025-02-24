@@ -5,9 +5,10 @@ import SignIn from './components/SignIn';
 import ProductList from './components/admin/product/ProductList';
 import CreateProduct from './components/admin/product/CreateProduct';
 import EditProduct from './components/admin/product/EditProduct';
-import CreateCategory from './components/admin/category/CreateCategory';
 import EditProfile from './components/admin/EditProfile';
 import Orders from './components/admin/Orders';
+import CategoryList from './components/admin/category/CategoryList';
+import UserList from './components/admin/user/UserList';
 const App = () => {
 
   return (
@@ -18,9 +19,10 @@ const App = () => {
           <Route path="/profile/edit" element={<EditProfile />} />
           <Route path="/admin/products" element={<ProductList />} />
           <Route path="/admin/orders" element={<Orders />} />
-          <Route path="/admin/products/create" element={<CreateProduct />}/>
-          <Route path="/admin/categories/create" element={<CreateCategory />}/>
+          <Route path="/admin/products/create" element={<CreateProduct />}/>   
           <Route path="/admin/products/edit/:id" element={<EditProduct />}/>
+          <Route path="/admin/categories" element={<CategoryList />} />
+          <Route path="/admin/users" element={<UserList />} />
           <Route path="*" element={ <Navigate to="/admin/products" />} />
         </Routes>
     </BrowserRouter>
